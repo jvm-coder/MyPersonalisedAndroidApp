@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myConsLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    tools:context=".MainActivity">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/image_start"
+        app:civ_border_color="#4B5ECA"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#D50000"
+        app:civ_shadow_radius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/dive_in"
+        android:onClick="diveIn"
+        android:textColor="#BE9BEF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#7D02BA"
+        app:layout_constraintEnd_toEndOf="@+id/circularImageView"
+        app:layout_constraintStart_toStartOf="@+id/circularImageView"
+        app:layout_constraintTop_toBottomOf="@+id/circularImageView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@id/circularImageView"
+        app:layout_constraintLeft_toLeftOf="@id/circularImageView"
+        app:layout_constraintBottom_toTopOf="@id/circularImageView"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewA1"
+            android:text="A"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewS1"
+            android:text="S"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewS2"
+            android:text="S"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewA2"
+            android:text="A"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewS3"
+            android:text="S"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewS4"
+            android:text="S"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/textViewI"
+            android:text="I"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewN"
+            android:text="N"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#BBA6D8" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

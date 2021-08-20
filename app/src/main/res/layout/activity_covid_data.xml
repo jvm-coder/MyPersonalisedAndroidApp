@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#16052E"
+    tools:context=".CovidData">
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consLayHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linLayHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/consLayHead"
+            app:layout_constraintRight_toRightOf="@+id/consLayHead"
+            app:layout_constraintTop_toTopOf="@+id/consLayHead">
+
+            <Spinner
+                android:id="@+id/spinnerStates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consLayTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linLayHead">
+
+            <TextView
+                android:id="@+id/textViewTotalConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmed"
+                android:textColor="#D50000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/consLayTotal"
+                app:layout_constraintRight_toLeftOf="@id/textViewTotalActive"
+                app:layout_constraintTop_toTopOf="@id/consLayTotal" />
+
+            <TextView
+                android:id="@+id/textViewDeltaTotalConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="delta"
+                android:textColor="#D50000"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewTotalConfirmed"
+                app:layout_constraintRight_toRightOf="@+id/textViewTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalConfirmed" />
+
+            <TextView
+                android:id="@+id/textViewTotalConfirmedData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total"
+                android:textColor="#D50000"
+                android:textSize="17dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewDeltaTotalConfirmed"
+                app:layout_constraintRight_toRightOf="@+id/textViewDeltaTotalConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDeltaTotalConfirmed" />
+
+
+            <TextView
+                android:id="@+id/textViewTotalActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Active"
+                android:textColor="#304FFE"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/textViewTotalConfirmed"
+                app:layout_constraintRight_toLeftOf="@+id/textViewTotalRecovered"
+                app:layout_constraintTop_toTopOf="@id/textViewTotalConfirmed" />
+
+            <TextView
+                android:id="@+id/textViewDeltaTotalActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#304FFE"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewTotalActive"
+                app:layout_constraintRight_toRightOf="@+id/textViewTotalActive"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalActive" />
+
+            <TextView
+                android:id="@+id/textViewTotalActiveData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total"
+                android:textColor="#304FFE"
+                android:textSize="17dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewDeltaTotalActive"
+                app:layout_constraintRight_toRightOf="@+id/textViewDeltaTotalActive"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDeltaTotalActive" />
+
+
+            <TextView
+                android:id="@+id/textViewTotalRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recovered"
+                android:textColor="#058C3D"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/textViewTotalActive"
+                app:layout_constraintRight_toLeftOf="@+id/textViewTotalDeceased"
+                app:layout_constraintTop_toTopOf="@+id/textViewTotalDeceased" />
+
+            <TextView
+                android:id="@+id/textViewDeltaTotalRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="delta"
+                android:textColor="#058C3D"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewTotalRecovered"
+                app:layout_constraintRight_toRightOf="@+id/textViewTotalRecovered"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalRecovered" />
+
+            <TextView
+                android:id="@+id/textViewTotalRecoveredData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total"
+                android:textColor="#058C3D"
+                android:textSize="17dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewDeltaTotalRecovered"
+                app:layout_constraintRight_toRightOf="@+id/textViewDeltaTotalRecovered"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDeltaTotalRecovered" />
+
+
+            <TextView
+                android:id="@+id/textViewTotalDeceased"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Deceased"
+                android:textColor="#636363"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/textViewTotalRecovered"
+                app:layout_constraintRight_toRightOf="@id/consLayTotal"
+                app:layout_constraintTop_toTopOf="@id/consLayTotal" />
+
+            <TextView
+                android:id="@+id/textViewDeltaTotalDeceased"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="delta"
+                android:textColor="#636363"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewTotalDeceased"
+                app:layout_constraintRight_toRightOf="@+id/textViewTotalDeceased"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalDeceased" />
+
+            <TextView
+                android:id="@+id/textViewTotalDeceasedData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total"
+                android:textColor="#636363"
+                android:textSize="17dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewDeltaTotalDeceased"
+                app:layout_constraintRight_toRightOf="@+id/textViewDeltaTotalDeceased"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDeltaTotalDeceased" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linLayHeadBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consLayHead">
+
+        <TextView
+            android:id="@+id/textViewDistLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="#28035C"
+            android:text="District"
+            android:textColor="#CFB5F4"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewConfirmedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="#28035C"
+            android:gravity="center"
+            android:text="Confirmed"
+            android:textColor="#D50000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewActiveLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="#28035C"
+            android:gravity="center"
+            android:text="Active"
+            android:textColor="#304FFE"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRecoveredLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="#28035C"
+            android:gravity="center"
+            android:text="Recovered"
+            android:textColor="#058C3D"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewDeceasedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="#28035C"
+            android:gravity="center"
+            android:text="Deceased"
+            android:textColor="#636363"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/consLayBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linLayHeadBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consLayBody" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
