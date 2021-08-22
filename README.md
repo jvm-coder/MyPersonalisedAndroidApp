@@ -4,4 +4,4 @@ This is my personalised android application to fulfill my day to day tasks that 
 This is a live project, so only COVID data tracking part is available now and i am working on the rest part.
 Here are some insights of the app ------->
 
-!(home.jpg)
+![](home.jpg)
